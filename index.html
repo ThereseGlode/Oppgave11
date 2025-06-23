@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Home</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tilfeldig Pokémon-fakta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
   </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
+  <body class="bg-yellow-100 min-h-screen flex items-center justify-center p-6">
+    <div class="bg-white shadow-lg rounded-2xl p-8 text-center w-full max-w-sm">
+      <h1 class="text-2xl font-bold mb-4">Tilfeldig Pokémon</h1>
+      <div id="pokemonInfo" class="mb-4 min-h-[150px]">
+        <p class="text-gray-500">Klikk knappen for å hente en Pokémon.</p>
+      </div>
+      <button id="fetchBtn" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-xl transition">
+        Hent Pokémon
+      </button>
+      <p id="loading" class="text-sm text-gray-500 mt-3 hidden">Laster...</p>
+    </div>
   </body>
 </html>
